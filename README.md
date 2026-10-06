@@ -1,325 +1,213 @@
-# Awesome-Security-Investigation-Threat-Analysis
-
-## Top Security Investigation & Threat Analysis Ecosystem
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on SIEM, Threat Hunting & Self-Hosted Security Analytics*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **commercial security investigation platforms** and **open-source projects** that help security teams detect, investigate, and respond to threats. These tools aggregate logs, correlate events, hunt for indicators of compromise, and automate incident response.
-
-
-
-**Examples** include Amazon Detective, Microsoft Sentinel, Splunk Enterprise Security, Google Chronicle, Datadog Cloud SIEM, Panther Labs, Elastic Security, Exabeam, Securonix, and Rapid7 InsightIDR (the category leaders).
-
-
-
-**Open-source emphasis**: Security investigation is a strong open-source domain. **Wazuh** leads as the most balanced open-source SIEM/XDR, **Security Onion** delivers complete network security monitoring, **Matano** brings serverless security data lakes, and **Elastic Security** provides SIEM/EDR. **TheHive** and **Cortex** handle incident response, **MISP** aggregates threat intelligence, and **Velociraptor** enables endpoint hunting. **Zeek**, **Suricata**, and **Sigma** complete the detection stack. This section is heavily expanded.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Microsoft Sentinel](https://azure.microsoft.com/en-us/products/microsoft-sentinel)**  
-
-  **Microsoft's cloud-native SIEM and SOAR** — integrated with Azure, Microsoft 365, and third-party sources . **Consumption-based pricing** per GB ingested . **Best for Microsoft-centric organizations** .
-
-
-
-- **[Splunk Enterprise Security](https://www.splunk.com/en_us/products/enterprise-security.html)**  
-
-  **The enterprise SIEM standard** — mature UEBA, correlation, and the largest app ecosystem . **Pricing scales with data volume** . **Best for large SOCs with dedicated teams** .
-
-
-
-- **[Google Chronicle](https://cloud.google.com/chronicle)**  
-
-  **Google's cloud-native SIEM** — petabyte-scale ingestion, UDM normalization, and YARA-L detection . **Best for massive scale** .
-
-
-
-- **[Amazon Detective](https://aws.amazon.com/detective/)**  
-
-  **AWS's security investigation service** — visualizes and analyzes security findings . **Best for AWS-native investigations** .
-
-
-
-- **[Datadog Cloud SIEM](https://www.datadoghq.com/)**  
-
-  **Datadog's SIEM** — integrated with observability platform . **Best for Datadog users** .
-
-
-
-- **[Panther Labs](https://panther.com/)**  
-
-  **Cloud-native SIEM** — detection-as-code with Python rules . **Best for modern security teams** .
-
-
-
-- **[Elastic Security](https://www.elastic.co/security)**  
-
-  **SIEM and EDR on Elastic Stack** — detection rules, timelines, and cases . **Best for Elastic ecosystem users** .
-
-
-
-- **[Exabeam](https://www.exabeam.com/)**  
-
-  **SIEM with behavioral analytics (UEBA)** — automated incident timelines . **Best for behavioral detection** .
-
-
-
-- **[Securonix](https://www.securonix.com/)**  
-
-  **Cloud-native SIEM with UEBA, SOAR, and NDR** . **Best for integrated security analytics** .
-
-
-
-- **[Rapid7 InsightIDR](https://www.rapid7.com/products/insightidr/)**  
-
-  **SIEM with UEBA, endpoint detection, and honeypots** . **Best for SIEM + EDR convergence** .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### SIEM & Security Analytics
-
-
-
-- **[Wazuh](https://github.com/wazuh/wazuh)**  
-
-  **The leading open-source security platform with SIEM and XDR capabilities**, GPLv2 licensed with **16,646+ GitHub stars** . **Native HIDS, FIM, rootkit detection, vulnerability detection, and 1,000+ MITRE ATT&CK rules** . **OpenSearch is the default backend** since v4.4 — Apache 2.0 licensed . **Single-node handles 5,000-10,000 EPS** on 8 vCPU / 16 GB RAM . **The best-balanced open-source SIEM** for most organizations . **Best for log aggregation, detection, and compliance** .
-
-
-
-- **[Security Onion](https://github.com/Security-Onion-Solutions/securityonion)**  
-
-  **Free and open platform for network security monitoring, log management, and case management** . **Integrates Suricata, Zeek, Elastic Stack, Strelka, and OpenCanary** . **Full packet capture** provides "a video camera for your network" . **Scales from single appliance to thousand-node grid** . **Best for network-focused monitoring and threat hunting** .
-
-
-
-- **[Matano](https://github.com/matanolabs/matano)**  
-
-  **Open-source, serverless SIEM for AWS**, Apache-2.0 licensed . **Security data lake in your AWS account** — ingest petabytes, store in Iceberg Parquet on S3 . **Detection-as-code in Python** — manage rules in Git . **No vendor lock-in** — query from Athena, Snowflake . **Best for AWS-native security data lakes** .
-
-
-
-- **[Elastic Security](https://github.com/elastic/elasticsearch)**  
-
-  **SIEM and EDR on Elastic Stack**, Apache-2.0 (OpenSearch) or Elastic License . **Detection rules, timelines, and cases** . **Trade-off**: Free version lacks correlation engine and built-in rules . **Best for Elastic Stack users** .
-
-
-
-- **[OpenSearch Security Analytics](https://github.com/opensearch-project/OpenSearch)**  
-
-  **Apache 2.0 licensed fork of Elasticsearch/Kibana** . **Security Analytics includes Sigma rules, alerting, and anomaly detection at no cost** . **Best for open-source SIEM with Sigma rules** .
-
-
-
-### Incident Response & Case Management
-
-
-
-- **[TheHive](https://github.com/TheHive-Project/TheHive)**  
-
-  **Open-source incident response platform**, AGPL-3.0 licensed with **3,500+ GitHub stars** . **Case management, collaboration, and task tracking** for security incidents . **Integrates with MISP and Cortex** . **The de facto open-source incident response platform** . **Best for SOC case management** .
-
-
-
-- **[Cortex](https://github.com/TheHive-Project/Cortex)**  
-
-  **Open-source observable analysis engine**, AGPL-3.0 licensed . **Analyze observables (IPs, domains, files) with 100+ analyzers** . **Integrates with TheHive** . **Best for automated observable analysis** .
-
-
-
-- **[MISP](https://github.com/MISP/MISP)**  
-
-  **Open-source threat intelligence platform**, AGPL-3.0 licensed with **5,000+ GitHub stars** . **Share, store, and correlate threat indicators** . **The de facto open-source threat intel platform** . **Best for threat intelligence sharing** .
-
-
-
-- **[OpenCTI](https://github.com/OpenCTI-Platform/opencti)**  
-
-  **Open-source cyber threat intelligence platform**, Apache-2.0 licensed . **Structured threat intelligence with STIX/TAXII** . **Best for CTI management** .
-
-
-
-### Endpoint Hunting & Forensics
-
-
-
-- **[Velociraptor](https://github.com/Velocidex/velociraptor)**  
-
-  **Open-source endpoint monitoring and digital forensics**, Apache-2.0 licensed with **3,000+ GitHub stars** . **Query endpoints at scale with VQL** . **The best open-source endpoint hunting tool** . **Best for threat hunting and DFIR** .
-
-
-
-- **[GRR](https://github.com/google/grr)**  
-
-  **Google's remote live forensics**, Apache-2.0 licensed . **Scalable incident response and forensics** . **Best for enterprise DFIR** .
-
-
-
-- **[osquery](https://github.com/osquery/osquery)**  
-
-  **SQL-powered operating system instrumentation**, Apache-2.0 licensed with **22,000+ GitHub stars** . **Query endpoints like a database** . **Best for endpoint visibility** .
-
-
-
-- **[Fleet](https://github.com/fleetdm/fleet)**  
-
-  **Open-source osquery manager**, MIT licensed . **Manage osquery at scale** . **Best for endpoint fleet management** .
-
-
-
-### Network Detection & Analysis
-
-
-
-- **[Zeek](https://github.com/zeek/zeek)**  
-
-  **Network security monitor**, BSD-3-Clause licensed . **Rich network metadata and file extraction** . **Best for network visibility** .
-
-
-
-- **[Suricata](https://github.com/OISF/suricata)**  
-
-  **Network IDS/IPS/NSM**, GPL-2.0 licensed . **Deep packet inspection with TLS and application-layer detection** . **Best for network detection** .
-
-
-
-- **[Snort](https://github.com/snort3/snort3)**  
-
-  **Network IDS/IPS**, GPL-2.0 licensed . **DDoS, port scan, and OS fingerprinting detection** . **Best for network intrusion detection** .
-
-
-
-- **[RITA](https://github.com/activecm/rita)**  
-
-  **Real Intelligence Threat Analytics**, BSD-3-Clause licensed . **Detect beaconing and C2 traffic** . **Best for network threat hunting** .
-
-
-
-### Detection Rules & Frameworks
-
-
-
-- **[Sigma](https://github.com/SigmaHQ/sigma)**  
-
-  **Open standard for detection rules**, Apache-2.0 licensed with **8,000+ GitHub stars** . **Vendor-neutral detection rules** — convert to any SIEM . **The de facto standard for detection-as-code** . **Best for portable detection rules** .
-
-
-
-- **[MITRE ATT&CK](https://github.com/mitre-attack/attack-navigator)**  
-
-  **Adversary tactics and techniques knowledge base** . **The standard for threat modeling** . **Best for detection coverage mapping** .
-
-
-
-- **[Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)**  
-
-  **Library of ATT&CK-mapped tests** . **Best for detection validation** .
-
-
-
-- **[Chainsaw](https://github.com/WithSecureLabs/chainsaw)**  
-
-  **Rapidly search and hunt through Windows event logs**, Apache-2.0 licensed . **Best for Windows forensic analysis** .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Logstash** — Data collection and transformation .
-
-- **Fluentd** — Unified logging layer .
-
-- **Vector** — Observability data pipeline .
-
-- **Graylog** — Log management with SIEM capabilities .
-
-- **Apache Metron** — Big data security analytics (retired) .
-
-- **Prelude SIEM** — Hybrid SIEM with correlation .
-
-- **SIEMonster** — Open-source SIEM for MSSPs .
-
-- **Deepfence** — Cloud-native security and threat analysis .
-
-
-
-**Frameworks for building custom security investigation solutions**: Combine **Wazuh** for SIEM/XDR with compliance and MITRE rules . Use **Security Onion** for network-focused monitoring with full packet capture . Deploy **Matano** for AWS-native security data lakes . Choose **TheHive** + **Cortex** for incident response and case management . Integrate **MISP** or **OpenCTI** for threat intelligence . Use **Velociraptor** for endpoint hunting and DFIR . Deploy **Sigma** for portable detection rules . Note that true enterprise security investigation with curated threat intelligence, managed detection content, and vendor-supported SLAs (Splunk, Sentinel, Chronicle) remains primarily commercial territory; open-source stacks provide strong SIEM, incident response, and threat hunting foundations that require integration for complete security operations.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Security investigation platforms process sensitive security telemetry and may contain PII. Self-hosted solutions require proper security hardening, access controls, and compliance with data privacy regulations.
-
-- **Open-source SIEM has hidden costs** — engineering overhead, detection coverage gaps, limited UEBA, manual compliance reporting, and higher false-positive rates increase analyst triage time . A senior security engineer dedicated to SIEM maintenance costs more than many commercial licenses .
-
-- **Resource requirements are real** — Security Onion Standalone needs 24 GB RAM minimum, 32 GB+ recommended . Wazuh single-node handles 5,000-10,000 EPS on 8 vCPU / 16 GB RAM . Size infrastructure before committing.
-
-- **Detection rules require tuning** — Sigma and Wazuh rules produce false positives. Plan for log-only mode before production blocking .
-
-- The open-source ecosystem provides strong SIEM, incident response, and threat hunting foundations, but **curated threat intelligence, managed detection content, and vendor-supported SLAs** remain primarily commercial offerings.
-
-
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Security Investigation &amp; Threat Analysis Banner" width="100%"/>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Diccord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Security-Investigation-Threat-Analysis/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Security-Investigation-Threat-Analysis?style=flat-square&color=gold" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Security-Investigation-Threat-Analysis/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Security-Investigation-Threat-Analysis?style=flat-square&color=blue" alt="GitHub Forks"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Security-Investigation-Threat-Analysis/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
 ---
 
+# 🛡️ Awesome Security Investigation & Threat Analysis
 
+A curated, SEO-optimized ecosystem guide of **Commercial SaaS Security Platforms** and **Open-Source GitHub Projects** for Security Operations Centers (SOC), Digital Forensics and Incident Response (DFIR) teams, Security Information and Event Management (SIEM), Threat Intelligence (CTI), and proactive Threat Hunting.
 
-**Made for security analysts, SOC teams, and organizations seeking security investigation sovereignty.**  
+> **Last updated**: October 2026
 
-Let's make security investigation and threat analysis more open, transparent, and effective.
+---
+
+## 📌 Table of Contents
+
+- [📊 SaaS &amp; Commercial Security Platforms](#-saas--commercial-security-platforms)
+- [⚡ Open-Source Security Projects](#-open-source-security-projects)
+  - [🔎 SIEM &amp; Security Analytics](#-siem--security-analytics)
+  - [🎯 Threat Intelligence &amp; Case Management](#-threat-intelligence--case-management)
+  - [🕵️ Endpoint Forensics &amp; Threat Hunting](#-endpoint-forensics--threat-hunting)
+  - [📡 Network Security Monitoring &amp; Packet Analysis](#-network-security-monitoring--packet-analysis)
+  - [⚙️ Detection-as-Code &amp; Testing Frameworks](#️-detection-as-code--testing-frameworks)
+- [📈 Star History](#-star-history)
+- [💖 Support &amp; Contributing](#-support--contributing)
+- [⚠️ Disclaimer](#️-disclaimer)
+
+---
+
+## 📊 SaaS &amp; Commercial Security Platforms
+
+> 💡 **Market Overview & Fragmentation**: The global SIEM and Security Investigation market is estimated at **~$10.5 Billion**, growing at a **~14.5% CAGR**. The sector is **moderately fragmented**, characterized by intense competition between cloud hyperscalers (Microsoft, Google, AWS), established cybersecurity giants (Splunk/Cisco, Datadog), and innovative detection-as-code startups (Panther Labs, Securonix), alongside self-hosted open-source security stacks.
+
+*Platforms below are sorted by **Company Market Cap / Valuation** in descending order.*
+
+| 🏢 Platform &amp; Description | 💰 Specific Starting Pricing | 🎁 Free Tier / Free Trial Limits | 📈 Company Size / Valuation |
+| :--- | :--- | :--- | :--- |
+| **[Microsoft Sentinel](https://azure.microsoft.com/en-us/products/microsoft-sentinel)**<br/>Cloud-native SIEM and SOAR deeply integrated with Azure, Microsoft 365, and multi-cloud environments. | **$4.30 / GB ingested**<br/>*(Pay-as-you-go Log Analytics + Sentinel)* | **31-Day Free Trial**<br/>Up to **10 GB/day** ingested across up to 20 workspaces. | **~$3.1 Trillion**<br/>*(Microsoft Corp)* |
+| **[Google Chronicle](https://cloud.google.com/chronicle)**<br/>Petabyte-scale cloud SIEM leveraging Google infrastructure, UDM normalization, and YARA-L rule detection. | **$2.50 / GB ingested**<br/>*(or ~$45 / user / year enterprise model)* | **30-Day Free Trial**<br/>Via GCP free tier with **$300 credits**. | **~$2.1 Trillion**<br/>*(Alphabet Inc)* |
+| **[Amazon Detective](https://aws.amazon.com/detective/)**<br/>AWS security investigation service that automatically analyzes and visualizes telemetry from GuardDuty and CloudTrail. | **$2.00 / GB ingested**<br/>*(First 1,000 GB/month volume tier)* | **30-Day Free Trial**<br/>Full feature access on all AWS accounts. | **~$2.0 Trillion**<br/>*(Amazon.com Inc)* |
+| **[Splunk Enterprise Security](https://www.splunk.com/en_us/products/enterprise-security.html)**<br/>The enterprise SIEM standard offering advanced correlation, UEBA, and extensive app marketplace integration. | **$1,800 / GB / year**<br/>*(or ~$4.00 / GB ingested on Splunk Cloud)* | **14-Day Free Trial**<br/>Splunk Cloud trial (or 60-day Enterprise trial capped at 500 MB/day). | **~$190 Billion**<br/>*(Cisco Systems / Splunk)* |
+| **[Datadog Cloud SIEM](https://www.datadoghq.com/)**<br/>Cloud SIEM integrated into observability platform for unified security logging, alerting, and metrics. | **$0.20 / GB analyzed / mo**<br/>*+ $15.00 / host / month base* | **14-Day Free Trial**<br/>Full access to Datadog platform &amp; Cloud SIEM. | **~$38.0 Billion**<br/>*(Datadog Inc)* |
+| **[Elastic Security](https://www.elastic.co/security)**<br/>Enterprise SIEM, endpoint protection, and timeline investigation built natively on Elastic Cloud. | **$95.00 / month**<br/>*(Elastic Cloud Standard deployment tier)* | **14-Day Free Trial**<br/>Full Elastic Cloud deployment trial. | **~$9.0 Billion**<br/>*(Elastic NV)* |
+| **[Rapid7 InsightIDR](https://www.rapid7.com/products/insightidr/)**<br/>Cloud SIEM combining user behavior analytics (UEBA), endpoint detection, network traffic analysis, and honeypots. | **$5.77 / asset / month**<br/>*(Billed annually for 500 assets)* | **30-Day Free Trial**<br/>Full capabilities for up to 100 endpoints. | **~$2.4 Billion**<br/>*(Rapid7 Inc)* |
+| **[Exabeam](https://www.exabeam.com/)**<br/>Behavioral analytics-led SIEM platform automating threat detection, threat hunting timelines, and incident response. | **$6.00 / user / month**<br/>*(or ~$25,000 / year platform base)* | **30-Day Free Trial**<br/>Interactive sandbox evaluation on request. | **~$2.4 Billion**<br/>*(Exabeam Valuation)* |
+| **[Panther Labs](https://panther.com/)**<br/>Cloud-native SIEM built on Python detection-as-code, real-time alert processing, and serverless data lakes. | **$30,000 / year**<br/>*(Base Enterprise Cloud SaaS platform tier)* | **30-Day Free Trial**<br/>Enterprise POC environment upon request. | **~$1.4 Billion**<br/>*(Panther Labs Valuation)* |
+| **[Securonix](https://www.securonix.com/)**<br/>Cloud-native SIEM featuring AI-driven UEBA, autonomous threat hunting, SOAR integration, and insider threat monitoring. | **$15,000 / year**<br/>*(Base SaaS tier platform subscription)* | **30-Day Free Trial**<br/>Guided proof-of-concept sandbox on request. | **~$1.0 Billion**<br/>*(Securonix Valuation)* |
+
+---
+
+## ⚡ Open-Source Security Projects
+
+Top open-source security tools and frameworks for self-hosted SIEM, threat hunting, network monitoring, digital forensics, and incident management.
+
+*All open-source repositories below are sorted by **GitHub Star Count** in descending order.*
+
+### 🔎 SIEM &amp; Security Analytics
+
+- **[Elasticsearch](https://github.com/elastic/elasticsearch)**  
+  [![GitHub stars](https://img.shields.io/github/stars/elastic/elasticsearch?style=social&color=white)](https://github.com/elastic/elasticsearch/stargazers)  
+  **Distributed search and analytics engine powering the Elastic SIEM stack.** Apache-2.0 / Elastic Licensed. Ingests petabyte-scale security events with real-time indexing and search capabilities.
+
+- **[Wazuh](https://github.com/wazuh/wazuh)**  
+  [![GitHub stars](https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white)](https://github.com/wazuh/wazuh/stargazers)  
+  **The leading unified open-source SIEM &amp; XDR platform.** GPLv2 licensed. Features endpoint HIDS agents, File Integrity Monitoring (FIM), vulnerability detection, rootkit scanning, and 1,000+ out-of-the-box MITRE ATT&amp;CK detection rules using OpenSearch backend.
+
+- **[OpenSearch Security Analytics](https://github.com/opensearch-project/OpenSearch)**  
+  [![GitHub stars](https://img.shields.io/github/stars/opensearch-project/OpenSearch?style=social&color=white)](https://github.com/opensearch-project/OpenSearch/stargazers)  
+  **100% open-source search suite with built-in Security Analytics.** Apache-2.0 licensed. Out-of-the-box support for Sigma rule detection, threat intelligence mapping, log correlation, and real-time security alerting.
+
+- **[Security Onion](https://github.com/Security-Onion-Solutions/securityonion)**  
+  [![GitHub stars](https://img.shields.io/github/stars/Security-Onion-Solutions/securityonion?style=social&color=white)](https://github.com/Security-Onion-Solutions/securityonion/stargazers)  
+  **Comprehensive Linux distribution for threat hunting, enterprise security monitoring, and log management.** Integrates Suricata, Zeek, Elastic Stack, Strelka, and full packet capture capabilities.
+
+- **[HELK (Hunting ELK)](https://github.com/Cyb3rWard0g/HELK)**  
+  [![GitHub stars](https://img.shields.io/github/stars/Cyb3rWard0g/HELK?style=social&color=white)](https://github.com/Cyb3rWard0g/HELK/stargazers)  
+  **Threat hunting platform with advanced analytics capabilities.** GPL-3.0 licensed. Combines Kafka, Logstash, Elasticsearch, Kibana, Jupyter Notebooks, and Graph Analytics (GraphFrames) for hunting complex threats.
+
+- **[Matano](https://github.com/matanolabs/matano)**  
+  [![GitHub stars](https://img.shields.io/github/stars/matanolabs/matano?style=social&color=white)](https://github.com/matanolabs/matano/stargazers)  
+  **Open-source, serverless security data lake SIEM for AWS.** Apache-2.0 licensed. Ingests petabytes of logs into Apache Iceberg Parquet tables on S3, providing detection-as-code in Python and SQL querying via Athena/Snowflake.
+
+---
+
+### 🎯 Threat Intelligence &amp; Case Management
+
+- **[BloodHound](https://github.com/BloodHoundAD/BloodHound)**  
+  [![GitHub stars](https://img.shields.io/github/stars/BloodHoundAD/BloodHound?style=social&color=white)](https://github.com/BloodHoundAD/BloodHound/stargazers)  
+  **Active Directory and cloud security relationship graphing tool.** GPL-3.0 licensed. Uses graph theory to reveal hidden relationships and attack paths within Active Directory and Azure environments.
+
+- **[OpenCTI](https://github.com/OpenCTI-Platform/opencti)**  
+  [![GitHub stars](https://img.shields.io/github/stars/OpenCTI-Platform/opencti?style=social&color=white)](https://github.com/OpenCTI-Platform/opencti/stargazers)  
+  **Open-source Cyber Threat Intelligence (CTI) management platform.** Apache-2.0 licensed. Manages cyber threat knowledge, indicators of compromise (IOCs), threat actors, and TTPs using structured STIX 2.1 data models.
+
+- **[MISP](https://github.com/MISP/MISP)**  
+  [![GitHub stars](https://img.shields.io/github/stars/MISP/MISP?style=social&color=white)](https://github.com/MISP/MISP/stargazers)  
+  **The de facto open-source malware information sharing &amp; threat intelligence platform.** AGPL-3.0 licensed. Stores, correlates, and shares technical indicators, financial fraud data, and vulnerability information.
+
+- **[TheHive](https://github.com/TheHive-Project/TheHive)**  
+  [![GitHub stars](https://img.shields.io/github/stars/TheHive-Project/TheHive?style=social&color=white)](https://github.com/TheHive-Project/TheHive/stargazers)  
+  **Security Incident Response Platform and case management system.** AGPL-3.0 licensed. Enables collaborative SOC case tracking, task delegation, live analysis, and integration with MISP &amp; Cortex.
+
+- **[Shuffle](https://github.com/Shuffle/Shuffle)**  
+  [![GitHub stars](https://img.shields.io/github/stars/Shuffle/Shuffle?style=social&color=white)](https://github.com/Shuffle/Shuffle/stargazers)  
+  **Open-source Security Automation and Orchestration (SOAR) framework.** Apache-2.0 licensed. Features intuitive workflow automation, API integration, and playbooks for incident response teams.
+
+- **[Cortex](https://github.com/TheHive-Project/Cortex)**  
+  [![GitHub stars](https://img.shields.io/github/stars/TheHive-Project/Cortex?style=social&color=white)](https://github.com/TheHive-Project/Cortex/stargazers)  
+  **Powerful observable analysis and active response engine.** AGPL-3.0 licensed. Automates enrichment of IPs, URLs, domains, and file hashes using over 100+ built-in analyzers.
+
+---
+
+### 🕵️ Endpoint Forensics &amp; Threat Hunting
+
+- **[osquery](https://github.com/osquery/osquery)**  
+  [![GitHub stars](https://img.shields.io/github/stars/osquery/osquery?style=social&color=white)](https://github.com/osquery/osquery/stargazers)  
+  **SQL-powered operating system instrumentation and telemetry.** Apache-2.0 licensed. Exposes host status, running processes, network connections, and system configurations as queryable relational SQL tables.
+
+- **[Falco](https://github.com/falcosecurity/falco)**  
+  [![GitHub stars](https://img.shields.io/github/stars/falcosecurity/falco?style=social&color=white)](https://github.com/falcosecurity/falco/stargazers)  
+  **Cloud-native container runtime security &amp; threat detection.** Apache-2.0 licensed (CNCF Graduated). Monitors eBPF system calls in real-time to detect anomalous container activity and kernel exploits.
+
+- **[Fleet](https://github.com/fleetdm/fleet)**  
+  [![GitHub stars](https://img.shields.io/github/stars/fleetdm/fleet?style=social&color=white)](https://github.com/fleetdm/fleet/stargazers)  
+  **Open-source osquery fleet manager &amp; endpoint security platform.** MIT licensed. Enables centralized control, real-time querying, and vulnerability reporting across thousands of endpoints.
+
+- **[GRR Rapid Response](https://github.com/google/grr)**  
+  [![GitHub stars](https://img.shields.io/github/stars/google/grr?style=social&color=white)](https://github.com/google/grr/stargazers)  
+  **Google's scalable enterprise remote live digital forensics and incident response framework.** Apache-2.0 licensed. Conducts remote memory analysis, file collection, and host artifact inspection.
+
+- **[Velociraptor](https://github.com/Velocidex/velociraptor)**  
+  [![GitHub stars](https://img.shields.io/github/stars/Velocidex/velociraptor?style=social&color=white)](https://github.com/Velocidex/velociraptor/stargazers)  
+  **Advanced endpoint forensic artifact collection &amp; threat hunting engine.** Apache-2.0 licensed. Uses Velociraptor Query Language (VQL) for fast live response and forensic triage at enterprise scale.
+
+- **[Chainsaw](https://github.com/WithSecureLabs/chainsaw)**  
+  [![GitHub stars](https://img.shields.io/github/stars/WithSecureLabs/chainsaw?style=social&color=white)](https://github.com/WithSecureLabs/chainsaw?style=social&color=white/stargazers)  
+  **Rapid forensic search &amp; threat hunting engine for Windows Event Logs.** Apache-2.0 licensed. Rapidly searches event logs using Sigma rules and custom forensic detection patterns.
+
+---
+
+### 📡 Network Security Monitoring &amp; Packet Analysis
+
+- **[Zeek](https://github.com/zeek/zeek)**  
+  [![GitHub stars](https://img.shields.io/github/stars/zeek/zeek?style=social&color=white)](https://github.com/zeek/zeek/stargazers)  
+  **Passive network security monitoring and metadata analysis framework.** BSD-3-Clause licensed. Translates raw network traffic into structured high-level log records for forensic investigations.
+
+- **[Arkime](https://github.com/arkime/arkime)**  
+  [![GitHub stars](https://img.shields.io/github/stars/arkime/arkime?style=social&color=white)](https://github.com/arkime/arkime/stargazers)  
+  **Large-scale open-source packet capture (PCAP), indexing, and visual analysis system.** Apache-2.0 licensed. Stores and indexes network traffic for rapid PCAP retrieval and investigation.
+
+- **[Suricata](https://github.com/OISF/suricata)**  
+  [![GitHub stars](https://img.shields.io/github/stars/OISF/suricata?style=social&color=white)](https://github.com/OISF/suricata/stargazers)  
+  **High-performance Network IDS, IPS, and Network Security Monitoring engine.** GPL-2.0 licensed. Performs deep packet inspection, TLS inspection, and HTTP protocol parsing.
+
+- **[Snort 3](https://github.com/snort3/snort3)**  
+  [![GitHub stars](https://img.shields.io/github/stars/snort3/snort3?style=social&color=white)](https://github.com/snort3/snort3/stargazers)  
+  **Next-generation network intrusion detection and prevention system (NIDS/NIPS).** GPL-2.0 licensed. Features multi-threading, fast rule evaluation, and modular packet processing.
+
+- **[RITA (Real Intelligence Threat Analytics)](https://github.com/activecm/rita)**  
+  [![GitHub stars](https://img.shields.io/github/stars/activecm/rita?style=social&color=white)](https://github.com/activecm/rita/stargazers)  
+  **Open-source network threat hunting tool for detecting C2 beaconing.** BSD-3-Clause licensed. Parses Zeek logs to identify DNS tunneling, beaconing behavior, and long connections.
+
+---
+
+### ⚙️ Detection-as-Code &amp; Testing Frameworks
+
+- **[Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)**  
+  [![GitHub stars](https://img.shields.io/github/stars/redcanaryco/atomic-red-team?style=social&color=white)](https://github.com/redcanaryco/atomic-red-team/stargazers)  
+  **Library of simple, portable, MITRE ATT&amp;CK-mapped security tests.** MIT licensed. Enables SOC teams to validate detection coverage and test SIEM rule effectiveness against adversary techniques.
+
+- **[Sigma](https://github.com/SigmaHQ/sigma)**  
+  [![GitHub stars](https://img.shields.io/github/stars/SigmaHQ/sigma?style=social&color=white)](https://github.com/SigmaHQ/sigma/stargazers)  
+  **Generic signature format for SIEM detection rules.** Apache-2.0 licensed. The open standard for writing detection logic once and translating it to Splunk, Sentinel, Elastic, QRadar, or OpenSearch formats.
+
+- **[MITRE ATT&amp;CK Navigator](https://github.com/mitre-attack/attack-navigator)**  
+  [![GitHub stars](https://img.shields.io/github/stars/mitre-attack/attack-navigator?style=social&color=white)](https://github.com/mitre-attack/attack-navigator/stargazers)  
+  **Web application for visualizing and manipulating MITRE ATT&amp;CK matrices.** Apache-2.0 licensed. Allows security teams to map detection coverage, red team exercises, and threat actor tactics.
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Security-Investigation-Threat-Analysis&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Security-Investigation-Threat-Analysis&type=date&legend=top-left)
+
+---
+
+## 💖 Support &amp; Contributing
+
+Thank you for exploring this curated security investigation ecosystem! If you find this list helpful for your SOC team, security research, or DFIR investigations:
+
+- 🌟 **Star this repository** to show support and help others discover it.
+- 🔀 **Fork &amp; Contribute** by submitting a Pull Request with new tools, updates, or fixes.
+- 📢 **Share** with fellow security analysts, threat hunters, and security engineers.
+- ☕ **Sponsor the Maintainer**: Consider supporting ongoing open-source maintenance via [GitHub Sponsors](https://github.com/sponsors/ishandutta2007).
+
+Also, check out the curated list of lists at [Awesome-Awesome-Awesome](https://github.com/ishandutta2007/Awesome-Awesome-Awesome)!
+
+---
+
+## ⚠️ Disclaimer
+
+- This repository is a **community-curated index** for informational and educational purposes.
+- Security investigation platforms process highly sensitive log telemetry; properly configure access controls, data retention policies, and compliance guardrails before deployment.
+- **Open-source SIEM hidden costs**: Self-hosted solutions require engineering maintenance, custom rule tuning, infrastructure management, and analyst triaging overhead. Verify compute requirements before production deployment.
